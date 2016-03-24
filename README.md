@@ -9,7 +9,7 @@ A drag-and-drop grid view for Android modified from the [thquinn/DraggableGridVi
 + Modifing the logic of switching item.When you move to the other item,then start switch.
 + removing the scale of item when longclick on them. 
 + removing the scroll of gridview.
-+ removing the updateTask
++ removing the updateTask.
 
 # Sample
 <img src="https://github.com/andyken/DraggableGridView/blob/master/sample/sample.gif"/>
