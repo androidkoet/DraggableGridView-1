@@ -23,10 +23,8 @@ import java.util.Collections;
  */
 public class DraggableGridView extends ViewGroup implements View.OnTouchListener, View.OnClickListener ,View.OnLongClickListener{
 
-	private Context context;
 	private AttributeSet attributeSet;
 	private int draggedIndex = -1, lastX = -1, lastY = -1, lastTargetIndex = -1;
-	private boolean enabled = true;
 	private int xPadding, yPadding;//the x-axis and y-axis padding of the item
 	private int itemWidth, itemHeight, colCount;
 	private ArrayList<Integer> newPositions = new ArrayList<Integer>();
@@ -37,7 +35,6 @@ public class DraggableGridView extends ViewGroup implements View.OnTouchListener
 
 	public DraggableGridView(Context context, AttributeSet attributeSet) {
 		super(context, attributeSet);
-		this.context = context;
 		this.attributeSet = attributeSet;
 		init();
 	}
@@ -96,12 +93,13 @@ public class DraggableGridView extends ViewGroup implements View.OnTouchListener
 	@Override
 	protected int getChildDrawingOrder(int childCount, int i) {
 		//将正在移动的item放在最后一个绘制 防止出现正在移动的item被遮住的问题
-		if (draggedIndex == -1)
+		if (draggedIndex == -1){
 			return i;
-		else if (i == childCount - 1)
+		} else if (i == childCount - 1){
 			return draggedIndex;
-		else if (i >= draggedIndex)
+		} else if (i >= draggedIndex){
 			return i + 1;
+		}
 		return i;
 	}
 
@@ -126,8 +124,7 @@ public class DraggableGridView extends ViewGroup implements View.OnTouchListener
 
 	private int getColFromCoor(int coor) {
 		coor -= xPadding;
-		for (int i = 0; coor > 0; i++)
-		{
+		for (int i = 0; coor > 0; i++) {
 			if (coor < itemWidth)
 				return i;
 			coor -= (itemWidth + xPadding);
@@ -137,8 +134,7 @@ public class DraggableGridView extends ViewGroup implements View.OnTouchListener
 
 	private int getRowFromCoor(int coor) {
 		coor -= yPadding;
-		for (int i = 0; coor > 0; i++)
-		{
+		for (int i = 0; coor > 0; i++) {
 			if (coor < itemHeight)
 				return i;
 			coor -= (itemHeight + yPadding);
@@ -147,7 +143,7 @@ public class DraggableGridView extends ViewGroup implements View.OnTouchListener
 	}
 
 	/**
-	 * 判断当前移动到的位置 只有完全越过某一个item时才交换
+	 * 判断当前移动到的位置 当当前位置在另一个item区域时交换
 	 * @param x
 	 * @param y
 	 * @return
