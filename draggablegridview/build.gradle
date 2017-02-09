@@ -20,3 +20,30 @@ android {
 		}
 	}
 }
+
+ext {
+	bintrayRepo = 'maven'
+	bintrayName = 'draggablegridview'
+
+	publishedGroupId = 'com.github.andyken'
+	libraryName = 'draggablegridview'
+	artifact = 'draggablegridview'
+
+	libraryDescription = 'A drag-and-drop grid view for Android modified from the thquinn/DraggableGridView.'
+
+	siteUrl = 'https://github.com/andyken/DraggableGridView'
+	gitUrl = 'https://github.com/andyken/DraggableGridView.git'
+
+	libraryVersion = '1.0'
+
+	developerId = 'andyken'
+	developerName = 'YueXin Feng'
+	developerEmail = 'njufyx@163.com'
+
+	licenseName = 'The Apache Software License, Version 2.0'
+	licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+	allLicenses = ["Apache-2.0"]
+}
+
+apply from: 'install.gradle'
+apply from: 'bintray.gradle'
