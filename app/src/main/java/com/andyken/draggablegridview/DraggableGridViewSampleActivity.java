@@ -15,10 +15,11 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import com.andyken.draggablegridview.views.DraggableGridView;
+import com.github.andyken.draggablegridview.DraggableGridView;
 
 import java.util.ArrayList;
 import java.util.Random;
+
 
 public class DraggableGridViewSampleActivity extends Activity {
 	static Random random = new Random();

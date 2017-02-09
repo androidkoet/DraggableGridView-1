@@ -1,4 +1,4 @@
-package com.andyken.draggablegridview.views;
+package com.github.andyken.draggablegridview;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -13,7 +13,6 @@ import android.view.animation.AnimationSet;
 import android.view.animation.TranslateAnimation;
 import android.widget.AdapterView;
 
-import com.andyken.draggablegridview.R;
 
 import java.util.ArrayList;
 import java.util.Collections;

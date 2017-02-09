@@ -4,7 +4,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent">
 
-    <com.andyken.draggablegridview.views.DraggableGridView
+    <com.github.andyken.draggablegridview.DraggableGridView
         android:id="@+id/vgv"
         android:layout_height="fill_parent"
         android:layout_width="fill_parent"
