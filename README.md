@@ -11,12 +11,24 @@ A drag-and-drop grid view for Android modified from the [thquinn/DraggableGridVi
 + removing the scroll of gridview.
 + removing the updateTask.
 
+# Installation
+
+Add the dependency to your build.gradle.
+
+    compile 'com.github.andyken:draggablegridview:1.0'
+
 # Sample
 <img src="https://github.com/andyken/DraggableGridView/blob/master/sample/sample.gif"/>
 
 # 中文
 
 这是一个修改自[thquinn/DraggableGridView](https://github.com/thquinn/DraggableGridView)的Android拖动GridView.
+
+# 安装
+
+将下面语句加入到build.gradle的dependency中
+
+    compile 'com.github.andyken:draggablegridview:1.0'
 
 # 修改了哪些内容
 
